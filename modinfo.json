@@ -1,0 +1,29 @@
+{
+   "Version": "0.5.0",
+   "Anno": 8,
+   "ModID": "upgraded-upgrade-thresholds-ewjax",
+   "Difficulty": "harder",
+   "GameSetup": {
+	  "RequiresNewGame": false,
+	  "SafeToRemove": true,
+	  "Multiplayer": true,
+	  "Campaign": false
+},
+   "Dependencies": {
+	  "Require": [],
+	  "Optional": [],
+	  "LoadAfter": [],
+	  "Deprecate": []
+},
+   "Category": {
+	  "English": "Content"
+},
+   "ModName": {
+	  "English": "Upgraded Upgrade Thresholds (ewjax)"
+},
+   "Description": {
+	  "English": "#  Upgraded Upgrade Thresholds \n\n This mod adjusts fulfillment mechanics for a more challenging experience"
+},
+   "CreatorName": "ewjax",
+   "CreatorContact": ""
+}

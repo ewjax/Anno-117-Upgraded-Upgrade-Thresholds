@@ -1,0 +1,12 @@
+set MOD_DIR=[Content] Upgraded Upgrade Thresholds (ewjax)
+set SOURCE_BASE_DIR=D:\dev\Anno-117
+set DEST_BASE_DIR=C:\Users\ewjax\Documents\Anno 117 - Pax Romana\mods
+
+# create source and destination paths
+set SOURCE_DIR=%SOURCE_BASE_DIR%\%MOD_DIR%
+set DEST_DIR=%DEST_BASE_DIR%\%MOD_DIR%
+
+robocopy "%SOURCE_DIR%\data" "%DEST_DIR%\data" /mir
+copy /u "%SOURCE_DIR%\modinfo.json" "%DEST_DIR%"
+copy /u "%SOURCE_DIR%\thumbnail.png" "%DEST_DIR%"
+

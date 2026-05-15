@@ -1,0 +1,58 @@
+<ModOps>
+
+    <!-- Asset ModOp workaround: use it once before you use asset modops -->
+    <ModOp Add="/AssetList/Groups[last()]">
+        <Group>
+            <Assets />
+        </Group>
+    </ModOp>
+
+    <!--
+    new style asset modop: use Type="Replace" or "Merge" and specify the path to the 
+    Object you want to modify, then put the modified Object in the ModOp body, 
+    you can modify any field of the Object this way, and you can also add 
+    new fields if needed, just make sure the GUID of the Object is correct 
+    and matches the one in the game data, otherwise it will create a new 
+    Object instead of modifying the existing one
+
+    <ModOp Type="Merge" GUID="5473" Path="Values/Object">
+    <ModOp Merge="@5473/Object">
+
+    <ModOp Type="Merge" GUID="5473" Path="Values/ShipModuleOwner/ShipModulesConfig">
+    -->
+
+    <!-- Adjust upgrade values for Liberti, as a proof of concept -->
+    <ModOp Merge="@3087/Residence7/UpgradeThreshold">
+        <UpgradeThreshold>
+            <Public>
+                <Value>2</Value>
+            </Public>
+            <Food>
+                <Value>2</Value>
+            </Food>
+            <Fashion>
+                <Value>2</Value>
+            </Fashion>
+        </UpgradeThreshold>
+
+        
+    </ModOp>
+
+
+    <!--
+    <ModOp Merge="@3087/Residence7/UpgradeThreshold/Public/Value">
+        <Value>2</Value>
+    </ModOp>
+    <ModOp Merge="@3087/Residence7/UpgradeThreshold/Food/Value">
+        <Value>2</Value>
+    </ModOp>
+    <ModOp Merge="@3087/Residence7/UpgradeThreshold/Fashion/Value">
+        <Value>2</Value>
+    </ModOp>
+    -->
+
+
+
+</ModOps>
+
+
