@@ -153,12 +153,11 @@
     </ModOp>
 
     <!-- Mercators -->
-    <!-- note that we do not double the Mercator Household requirement, since:
-            IF the user starts in Albion, and
-            IF the user starts with Roman celts, then
-            there is no way to promote a Mercator to Noble, since doing so requires a) Fashion / Soap, and b) Household / Olive Oil
-        We'll leave the Fashion requirement doubled, and require the user to fill that need by purchasing some Soap from
-        Corvinus Procurator.  But there is no way to acquire Olive Oil
+    <!-- 
+    note that since Mercators need goods from the Latium region (Soap and Olive Oil), and since this mod makes it so you need to meet
+    ALL needs, not just half of them, the result is if you start in Albion, and start with Roman celts, you are stuck and won't be able
+    to promote a Mercator to Tier3 Noble, which is needed to unlock the Latium region.  You need to start with Celts instead.  Or, disable
+    this mod long enough to promote some Nobles, then you can turn it back on after you've unlocked Latium
     -->
     <ModOp Merge="@6475/Residence7/UpgradeThreshold">
         <UpgradeThreshold>
@@ -172,7 +171,7 @@
                 <Value>6</Value>
             </Fashion>
             <Household>
-                <Value>2</Value>
+                <Value>4</Value>
             </Household>
         </UpgradeThreshold>
     </ModOp>
