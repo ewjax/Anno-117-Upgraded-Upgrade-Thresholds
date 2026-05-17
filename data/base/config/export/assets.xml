@@ -8,20 +8,19 @@
     </ModOp>
 
     <!--
-    new style asset modop: use Type="Replace" or "Merge" and specify the path to the 
+    use Type="Replace" or "Merge" and specify the path to the 
     Object you want to modify, then put the modified Object in the ModOp body, 
     you can modify any field of the Object this way, and you can also add 
     new fields if needed, just make sure the GUID of the Object is correct 
     and matches the one in the game data, otherwise it will create a new 
     Object instead of modifying the existing one
 
+    Old style vs new style:
     <ModOp Type="Merge" GUID="5473" Path="Values/Object">
     <ModOp Merge="@5473/Object">
-
-    <ModOp Type="Merge" GUID="5473" Path="Values/ShipModuleOwner/ShipModulesConfig">
     -->
 
-    <!-- Adjust upgrade values for Liberti, as a proof of concept -->
+    <!-- Liberti -->
     <ModOp Merge="@3087/Residence7/UpgradeThreshold">
         <UpgradeThreshold>
             <Public>
@@ -34,24 +33,171 @@
                 <Value>2</Value>
             </Fashion>
         </UpgradeThreshold>
-
-        
     </ModOp>
 
+    <!-- Plebeians -->
+    <ModOp Merge="@3141/Residence7/UpgradeThreshold">
+        <UpgradeThreshold>
+            <Public>
+                <Value>6</Value>
+            </Public>
+            <Food>
+                <Value>6</Value>
+            </Food>
+            <Fashion>
+                <Value>6</Value>
+            </Fashion>
+            <Household>
+                <Value>4</Value>
+            </Household>
+        </UpgradeThreshold>
+    </ModOp>
 
-    <!--
-    <ModOp Merge="@3087/Residence7/UpgradeThreshold/Public/Value">
-        <Value>2</Value>
+    <!-- Equites -->
+    <ModOp Merge="@3142/Residence7/UpgradeThreshold">
+        <UpgradeThreshold>
+            <Public>
+                <Value>14</Value>
+            </Public>
+            <Food>
+                <Value>14</Value>
+            </Food>
+            <Fashion>
+                <Value>14</Value>
+            </Fashion>
+            <Household>
+                <Value>12</Value>
+            </Household>
+            <Wonders>
+                <Value>8</Value>
+            </Wonders>
+        </UpgradeThreshold>
     </ModOp>
-    <ModOp Merge="@3087/Residence7/UpgradeThreshold/Food/Value">
-        <Value>2</Value>
+
+    <!-- Patricians -->
+    <ModOp Merge="@3145/Residence7/UpgradeThreshold">
+        <UpgradeThreshold>
+            <Public>
+                <Value>30</Value>
+            </Public>
+            <Food>
+                <Value>30</Value>
+            </Food>
+            <Fashion>
+                <Value>30</Value>
+            </Fashion>
+            <Household>
+                <Value>28</Value>
+            </Household>
+            <Wonders>
+                <Value>16</Value>
+            </Wonders>
+            <Culture>
+                <Value>16</Value>
+            </Culture>
+        </UpgradeThreshold>
     </ModOp>
-    <ModOp Merge="@3087/Residence7/UpgradeThreshold/Fashion/Value">
-        <Value>2</Value>
+
+    <!-- Waders -->
+    <ModOp Merge="@6414/Residence7/UpgradeThreshold">
+        <UpgradeThreshold>
+            <Public>
+                <Value>2</Value>
+            </Public>
+            <Food>
+                <Value>2</Value>
+            </Food>
+            <Fashion>
+                <Value>2</Value>
+            </Fashion>
+        </UpgradeThreshold>
     </ModOp>
+
+    <!-- Smiths -->
+    <ModOp Merge="@6471/Residence7/UpgradeThreshold">
+        <UpgradeThreshold>
+            <Public>
+                <Value>6</Value>
+            </Public>
+            <Food>
+                <Value>6</Value>
+            </Food>
+            <Fashion>
+                <Value>6</Value>
+            </Fashion>
+            <Household>
+                <Value>4</Value>
+            </Household>
+        </UpgradeThreshold>
+    </ModOp>
+
+    <!-- Aldermen -->
+    <ModOp Merge="@6472/Residence7/UpgradeThreshold">
+        <UpgradeThreshold>
+            <Public>
+                <Value>14</Value>
+            </Public>
+            <Food>
+                <Value>14</Value>
+            </Food>
+            <Fashion>
+                <Value>14</Value>
+            </Fashion>
+            <Household>
+                <Value>12</Value>
+            </Household>
+            <Wonders>
+                <Value>8</Value>
+            </Wonders>
+        </UpgradeThreshold>
+    </ModOp>
+
+    <!-- Mercators -->
+    <!-- note that we do not double the Mercator Household requirement, since:
+            IF the user starts in Albion, and
+            IF the user starts with Roman celts, then
+            there is no way to promote a Mercator to Noble, since doing so requires a) Fashion / Soap, and b) Household / Olive Oil
+        We'll leave the Fashion requirement doubled, and require the user to fill that need by purchasing some Soap from
+        Corvinus Procurator.  But there is no way to acquire Olive Oil
     -->
+    <ModOp Merge="@6475/Residence7/UpgradeThreshold">
+        <UpgradeThreshold>
+            <Public>
+                <Value>6</Value>
+            </Public>
+            <Food>
+                <Value>6</Value>
+            </Food>
+            <Fashion>
+                <Value>6</Value>
+            </Fashion>
+            <Household>
+                <Value>2</Value>
+            </Household>
+        </UpgradeThreshold>
+    </ModOp>
 
-
+    <!-- Nobles -->
+    <ModOp Merge="@6514/Residence7/UpgradeThreshold">
+        <UpgradeThreshold>
+            <Public>
+                <Value>14</Value>
+            </Public>
+            <Food>
+                <Value>14</Value>
+            </Food>
+            <Fashion>
+                <Value>14</Value>
+            </Fashion>
+            <Household>
+                <Value>12</Value>
+            </Household>
+            <Wonders>
+                <Value>8</Value>
+            </Wonders>
+        </UpgradeThreshold>
+    </ModOp>
+    
 
 </ModOps>
 
