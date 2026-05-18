@@ -1,5 +1,5 @@
 {
-   "Version": "0.5.0",
+   "Version": "1.0.0",
    "Anno": 8,
    "ModID": "upgraded-upgrade-thresholds-ewjax",
    "Difficulty": "harder",
@@ -7,7 +7,7 @@
 	  "RequiresNewGame": false,
 	  "SafeToRemove": true,
 	  "Multiplayer": true,
-	  "Campaign": false
+	  "Campaign": true
 },
    "Dependencies": {
 	  "Require": [],
